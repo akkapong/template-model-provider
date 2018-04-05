@@ -36,6 +36,8 @@ class Base
                     $eachMsg .= $source['msgError'];
                 }
                 $eachMsg = $error['detail'].": ({$eachMsg})";
+            } else {
+                $eachMsg = $error['detail'];
             }
             if (!empty($errorMsg)) $errorMsg .= '|';    
             $errorMsg .= $eachMsg;
