@@ -319,6 +319,7 @@ class Curl
 
         $this->setOpt(CURLOPT_URL, $url);
         $this->preparePayload($data);
+        $this->setOpt(CURLOPT_CUSTOMREQUEST, 'POST');
         $this->exec();
         return $this;
     }

@@ -12,9 +12,8 @@ class Base
 
 	public function __construct()
 	{
-		define('BASE_DIR', dirname(__DIR__) . '/src');
-		$this->messages = include BASE_DIR . '/config/messages.php';
-        $this->helps    = include BASE_DIR . '/config/help.php';
+		$this->messages = dirname(__DIR__) . '/src/config/messages.php';
+        $this->helps    = dirname(__DIR__) . '/src/config/help.php';
 	}
 
 	protected function setCurl($url)
